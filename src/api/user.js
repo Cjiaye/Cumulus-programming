@@ -1,4 +1,4 @@
-import request from '@/uilt/request'
+import request from '@/utils/request'
 
 const login = (data) => {
   return request({

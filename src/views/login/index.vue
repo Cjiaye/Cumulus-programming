@@ -8,30 +8,17 @@
       <div class="login-form">
         <h2>欢迎回来</h2>
         <!-- 登陆验证表单 -->
-        <el-form
-          :model="ruleForm"
-          :rules="rules"
-          ref="ruleForm"
-          class="demo-ruleForm"
-        >
+        <el-form :model="loginForm" ref="LoginForm" :rules="loginRules">
           <el-form-item prop="username">
-            <el-input
-              prefix-icon="el-icon-user"
-              v-model="ruleForm.username"
-              placeholder="请输入用户名"
-            ></el-input>
+            <el-input v-model="loginForm.username" placeholder="请输入用户名">
+            </el-input>
           </el-form-item>
           <el-form-item prop="password">
-            <el-input
-              prefix-icon="el-icon-lock"
-              v-model="ruleForm.password"
-              placeholder="请输入密码"
-            ></el-input>
+            <el-input v-model="loginForm.password" placeholder="请输入密码">
+            </el-input>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="handleSubmitForm('ruleForm')"
-              >登录</el-button
-            >
+            <el-button type="primary" @click="handleSubmitForm">登录</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -39,39 +26,30 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'VueIndex',
+<script setup>
+import { reactive, ref } from 'vue'
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 
-  data() {
-    return {
-      ruleForm: {
-        username: '',
-        password: ''
-      },
-      rules: {
-        username: [
-          { required: true, message: '用户名不能为空', trigger: 'blur' }
-        ],
-        password: [{ required: true, message: '密码不能为空', trigger: 'blur' }]
-      }
-    }
-  },
+const store = useStore()
+const router = useRouter()
+const LoginForm = ref()
+const loginForm = reactive({
+  username: 'admin',
+  password: 'admin'
+})
 
-  mounted() {},
+const loginRules = {
+  username: [{ required: true, message: '用户名不能为空', trigger: 'blur' }],
+  password: [{ required: true, message: '密码不能为空', trigger: 'blur' }]
+}
 
-  methods: {
-    handleSubmitForm(formName) {
-      this.$refs[formName].validate((valid) => {
-        if (valid) {
-          alert('submit!')
-        } else {
-          console.log('error submit!!')
-          return false
-        }
-      })
-    }
-  }
+const handleSubmitForm = () => {
+  LoginForm.value.validate(async (valid) => {
+    if (!valid) return
+    await store.dispatch('user/login', loginForm)
+    router.push('/')
+  })
 }
 </script>
 
