@@ -25,7 +25,8 @@ import AppHeader from './header'
 </script>
 <style scoped lang="scss">
 .el-header {
-  background-color: pink;
+  --tw-bg-opacity: 1;
+  background-color: rgba(67, 56, 202, var(--tw-bg-opacity));
   width: 100%;
   margin-top: -7px;
   margin-left: -8px;

@@ -1,6 +1,6 @@
 <template>
-
-  <div>首页</div>
+   
+  <div>会员等级</div>
 </template>
 
 <script setup></script>

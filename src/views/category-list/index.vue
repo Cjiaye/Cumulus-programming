@@ -1,6 +1,6 @@
 <template>
-
-  <div>首页</div>
+   
+  <div>分类管理</div>
 </template>
 
 <script setup></script>

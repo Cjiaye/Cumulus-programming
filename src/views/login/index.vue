@@ -8,7 +8,7 @@
       <div class="login-form">
         <h2>欢迎回来</h2>
         <!-- 登陆验证表单 -->
-        <el-form :model="loginForm" ref="LoginForm" :rules="loginRules">
+        <el-form :model="loginForm" ref="LoginForm" :rulesb="loginRules">
           <el-form-item prop="username">
             <el-input v-model="loginForm.username" placeholder="请输入用户名">
             </el-input>

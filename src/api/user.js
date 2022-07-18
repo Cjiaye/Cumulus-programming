@@ -8,6 +8,14 @@ const login = (data) => {
   })
 }
 
+const getMenu = () => {
+  return request({
+    url: '/admin/getinfo',
+    method: 'POST'
+  })
+}
+
 export default {
-  login
+  login,
+  getMenu
 }

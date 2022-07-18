@@ -1,7 +1,7 @@
 <template>
-   
-  <div></div>
+  <app-menu></app-menu>
 </template>
-
-<script setup></script>
+<script setup>
+import AppMenu from './Menu'
+</script>
 <style scoped lang="scss"></style>

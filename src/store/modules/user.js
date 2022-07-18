@@ -18,6 +18,11 @@ export default {
       console.log(response)
       commit('SET_TOKEN', response.data.data.token)
       return response
+    },
+    async getmenu({ commit }) {
+      const response = await UserApi.getMenu()
+      console.log(response)
+      return response
     }
   }
 }

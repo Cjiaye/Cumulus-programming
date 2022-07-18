@@ -1,6 +1,6 @@
 <template>
-
-  <div>首页</div>
+   
+  <div>规格管理</div>
 </template>
 
 <script setup></script>
