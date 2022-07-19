@@ -1,8 +1,12 @@
 <template>
-  <div>
+  <div class="main">
     <router-view></router-view>
   </div>
 </template>
 
 <script setup></script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.main {
+  margin-top: 14px;
+}
+</style>

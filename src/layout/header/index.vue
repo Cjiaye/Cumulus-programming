@@ -11,7 +11,9 @@
     </div>
     <div class="box2">
       <span class="qp">
-        <el-icon><FullScreen /></el-icon>
+        <i @click="sreen">
+          <el-icon><FullScreen /></el-icon
+        ></i>
       </span>
       <span class="dropdown">
         <el-dropdown @command="handleCommand">
@@ -35,6 +37,7 @@
 </template>
 
 <script setup>
+import screenfull from 'screenfull'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 const handleCommand = (command) => {
@@ -57,6 +60,9 @@ const handleLogout = async () => {
 }
 const handleToHome = () => {
   console.log('a')
+}
+const sreen = () => {
+  screenfull.toggle()
 }
 </script>
 <style scoped lang="scss">

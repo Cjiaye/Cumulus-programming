@@ -10,6 +10,9 @@
         </el-aside>
         <el-container>
           <el-main>
+            <div class="tag">
+              <tags-view></tags-view>
+            </div>
             <app-main></app-main>
           </el-main>
         </el-container>
@@ -22,6 +25,7 @@
 import AppAside from './Aside/Menu.vue'
 import AppMain from './Main'
 import AppHeader from './header'
+import TagsView from '../components/TagsView'
 </script>
 <style scoped lang="scss">
 .el-header {
@@ -30,5 +34,11 @@ import AppHeader from './header'
   width: 100%;
   margin-top: -7px;
   margin-left: -8px;
+}
+.tag {
+  height: 50px;
+  margin-top: -34px;
+  overflow: hidden;
+  margin-left: -65px;
 }
 </style>
