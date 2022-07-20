@@ -15,7 +15,29 @@ const getMenu = () => {
   })
 }
 
+const getstatistics1 = () => {
+  return request({
+    url: 'admin/statistics1',
+    method: 'GET'
+  })
+}
+const getstatistics2 = () => {
+  return request({
+    url: 'admin/statistics2',
+    method: 'GET'
+  })
+}
+const getstatistics3 = () => {
+  return request({
+    url: 'admin/statistics3',
+    method: 'GET'
+  })
+}
+
 export default {
   login,
-  getMenu
+  getMenu,
+  getstatistics1,
+  getstatistics2,
+  getstatistics3
 }

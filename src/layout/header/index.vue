@@ -6,13 +6,13 @@
         <font>积云编程</font>
       </span>
       <span class="di2">
-        <el-icon><RefreshLeft /></el-icon>
+        <el-icon @click="sx"><RefreshLeft /></el-icon>
       </span>
     </div>
     <div class="box2">
       <span class="qp">
-        <i @click="sreen">
-          <el-icon><FullScreen /></el-icon
+        <i>
+          <el-icon @click="sreen"><FullScreen /></el-icon
         ></i>
       </span>
       <span class="dropdown">
@@ -63,6 +63,9 @@ const handleToHome = () => {
 }
 const sreen = () => {
   screenfull.toggle()
+}
+const sx = () => {
+  router.go(0)
 }
 </script>
 <style scoped lang="scss">

@@ -23,6 +23,11 @@ export default {
       const response = await UserApi.getMenu()
       console.log(response)
       return response
+    },
+    async statistics1({ commit }) {
+      const response = await UserApi.getstatistics1()
+      console.log(response)
+      return response
     }
   }
 }

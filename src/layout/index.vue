@@ -41,4 +41,8 @@ import TagsView from '../components/TagsView'
   overflow: hidden;
   margin-left: -65px;
 }
+
+.el-aside {
+  height: 100%;
+}
 </style>
