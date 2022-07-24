@@ -21,15 +21,17 @@ const getstatistics1 = () => {
     method: 'GET'
   })
 }
-const getstatistics2 = () => {
+
+const getShopList = () => {
   return request({
-    url: 'admin/statistics2',
+    url: '/admin/goods/1?tab=all',
     method: 'GET'
   })
 }
-const getstatistics3 = () => {
+
+const getclassify = () => {
   return request({
-    url: 'admin/statistics3',
+    url: '/admin/category',
     method: 'GET'
   })
 }
@@ -38,6 +40,6 @@ export default {
   login,
   getMenu,
   getstatistics1,
-  getstatistics2,
-  getstatistics3
+  getShopList,
+  getclassify
 }

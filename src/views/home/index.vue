@@ -95,7 +95,7 @@
     </el-row>
   </div>
 
-  <div class="bb2">
+  <!-- <div class="bb2">
     <div class="b1">
       <font>订单统计</font>
       <span>近一个月</span>
@@ -103,7 +103,7 @@
       <span>近24个小时</span>
     </div>
     <div class="b2"></div>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
@@ -114,7 +114,7 @@ const data = ref([])
 
 const statistics1 = async () => {
   const res = await store.dispatch('user/statistics1')
-  console.log(res)
+  // console.log(res)
   data.value = res.data.data.panels
 }
 statistics1()

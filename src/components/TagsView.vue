@@ -62,7 +62,7 @@ watch(
         title: route.meta.title,
         path: route.path
       }
-      console.log(obj)
+      // console.log(obj)
       store.dispatch('tagsview/addTag', obj)
     }
   },

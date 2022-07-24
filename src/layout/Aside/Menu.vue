@@ -20,7 +20,7 @@ const data = ref([])
 // const isCollapse = ref(true)
 const getMenuList = async () => {
   const res = await store.dispatch('user/getmenu')
-  console.log(res)
+  // console.log(res)
   data.value = res.data.data.menus
 }
 getMenuList()
