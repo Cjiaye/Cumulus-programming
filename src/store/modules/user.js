@@ -31,11 +31,26 @@ export default {
     },
     async getshop({ commit }) {
       const response = await UserApi.getShopList()
-      console.log(response)
+      // console.log(response)
       return response
     },
     async getsort({ commit }) {
       const response = await UserApi.getclassify()
+      // console.log(response)
+      return response
+    },
+    async getsku({ commit }) {
+      const response = await UserApi.getSkuList()
+      // console.log(response)
+      return response
+    },
+    async getcupon({ commit }) {
+      const response = await UserApi.getcoupon()
+      // console.log(response)
+      return response
+    },
+    async getmember({ commit }) {
+      const response = await UserApi.getmember()
       console.log(response)
       return response
     }

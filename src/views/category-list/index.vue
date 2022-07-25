@@ -26,9 +26,9 @@ const getsort = ref([])
 const store = useStore()
 const fl = async () => {
   const res = await store.dispatch('user/getsort')
-  console.log(res)
+  // console.log(res)
   getsort.value = res.data.data
-  console.log(res.data.data)
+  // console.log(res.data.data)
 }
 fl()
 </script>
